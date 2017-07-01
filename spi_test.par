@@ -1,0 +1,294 @@
+Release 14.7 par P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+DESKTOP-09VBFJG::  Sat Jul 01 20:27:45 2017
+
+par -w -intstyle ise -ol high -mt off spi_test_map.ncd spi_test.ncd
+spi_test.pcf 
+
+
+Constraints file: spi_test.pcf.
+Loading device for application Rf_Device from file '6slx16.nph' in environment D:\Applications\Xilinx\14.7\ISE_DS\ISE\.
+   "spi_test" is an NCD, version 3.2, device xc6slx16, package csg324, speed -2
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.23 2013-10-13".
+
+
+
+Device Utilization Summary:
+
+Slice Logic Utilization:
+  Number of Slice Registers:                   263 out of  18,224    1%
+    Number used as Flip Flops:                 239
+    Number used as Latches:                     24
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                        416 out of   9,112    4%
+    Number used as logic:                      412 out of   9,112    4%
+      Number using O6 output only:             243
+      Number using O5 output only:              58
+      Number using O5 and O6:                  111
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of   2,176    0%
+    Number used exclusively as route-thrus:      4
+      Number with same-slice register load:      0
+      Number with same-slice carry load:         4
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   189 out of   2,278    8%
+  Number of MUXCYs used:                       148 out of   4,556    3%
+  Number of LUT Flip Flop pairs used:          463
+    Number with an unused Flip Flop:           244 out of     463   52%
+    Number with an unused LUT:                  47 out of     463   10%
+    Number of fully used LUT-FF pairs:         172 out of     463   37%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of  18,224    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                         8 out of     232    3%
+    Number of LOCed IOBs:                        8 out of       8  100%
+    IOB Flip Flops:                              2
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of      32    0%
+  Number of RAMB8BWERs:                          0 out of      64    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       3 out of      16   18%
+    Number used as BUFGs:                        3
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   2 out of     248    1%
+    Number used as OLOGIC2s:                     2
+    Number used as OSERDES2s:                    0
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      32    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+WARNING:Timing:3175 - fpgaclock does not clock data to pulsepin1
+WARNING:Timing:3225 - Timing constraint COMP "pulsepin1" OFFSET = OUT 20 ns AFTER COMP "fpgaclock"; ignored during timing analysis
+WARNING:Timing:3175 - fpgaclock does not clock data to pulsepin2
+WARNING:Timing:3225 - Timing constraint COMP "pulsepin2" OFFSET = OUT 20 ns AFTER COMP "fpgaclock"; ignored during timing analysis
+Starting initial Timing Analysis.  REAL time: 2 secs 
+Finished initial Timing Analysis.  REAL time: 2 secs 
+
+Starting Router
+
+
+Phase  1  : 1987 unrouted;      REAL time: 3 secs 
+
+Phase  2  : 1705 unrouted;      REAL time: 3 secs 
+
+Phase  3  : 517 unrouted;      REAL time: 4 secs 
+
+Phase  4  : 517 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
+
+Updating file: spi_test.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
+
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
+
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
+
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
+
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
+
+Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
+Total REAL time to Router completion: 5 secs 
+Total CPU time to Router completion: 4 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|    spi_I1/sync_BUFG |  BUFGMUX_X2Y3| No   |   24 |  0.023     |  1.106      |
++---------------------+--------------+------+------+------------+-------------+
+|     fpgaclock_BUFGP | BUFGMUX_X3Y13| No   |   10 |  0.590     |  1.666      |
++---------------------+--------------+------+------+------------+-------------+
+|       pll/clk2_BUFG |  BUFGMUX_X2Y2| No   |   76 |  0.031     |  1.107      |
++---------------------+--------------+------+------+------------+-------------+
+|spi_I1/spi_rst_data[ |              |      |      |            |             |
+|         3]_AND_41_o |         Local|      |    2 |  0.000     |  0.576      |
++---------------------+--------------+------+------+------------+-------------+
+|spi_I1/spi_rst_data[ |              |      |      |            |             |
+|         4]_AND_39_o |         Local|      |    2 |  0.000     |  0.608      |
++---------------------+--------------+------+------+------------+-------------+
+|spi_I1/spi_rst_data[ |              |      |      |            |             |
+|         20]_AND_7_o |         Local|      |    2 |  0.000     |  0.608      |
++---------------------+--------------+------+------+------------+-------------+
+|spi_I1/spi_rst_data[ |              |      |      |            |             |
+|        15]_AND_17_o |         Local|      |    2 |  0.000     |  0.360      |
++---------------------+--------------+------+------+------------+-------------+
+|spi_I1/spi_rst_data[ |              |      |      |            |             |
+|         21]_AND_5_o |         Local|      |    2 |  0.000     |  0.587      |
++---------------------+--------------+------+------+------------+-------------+
+|spi_I1/spi_rst_data[ |              |      |      |            |             |
+|         22]_AND_3_o |         Local|      |    2 |  0.000     |  0.607      |
++---------------------+--------------+------+------+------------+-------------+
+|spi_I1/spi_rst_data[ |              |      |      |            |             |
+|         23]_AND_1_o |         Local|      |    2 |  0.000     |  0.565      |
++---------------------+--------------+------+------+------------+-------------+
+|spi_I1/spi_rst_data[ |              |      |      |            |             |
+|        16]_AND_15_o |         Local|      |    2 |  0.000     |  0.360      |
++---------------------+--------------+------+------+------------+-------------+
+|spi_I1/spi_rst_data[ |              |      |      |            |             |
+|        17]_AND_13_o |         Local|      |    2 |  0.000     |  0.371      |
++---------------------+--------------+------+------+------------+-------------+
+|spi_I1/spi_rst_data[ |              |      |      |            |             |
+|         5]_AND_37_o |         Local|      |    2 |  0.000     |  0.371      |
++---------------------+--------------+------+------+------------+-------------+
+|spi_I1/spi_rst_data[ |              |      |      |            |             |
+|        10]_AND_27_o |         Local|      |    2 |  0.000     |  0.608      |
++---------------------+--------------+------+------+------------+-------------+
+|spi_I1/spi_rst_data[ |              |      |      |            |             |
+|        18]_AND_11_o |         Local|      |    2 |  0.000     |  0.602      |
++---------------------+--------------+------+------+------------+-------------+
+|spi_I1/spi_rst_data[ |              |      |      |            |             |
+|         6]_AND_35_o |         Local|      |    2 |  0.000     |  0.381      |
++---------------------+--------------+------+------+------------+-------------+
+|spi_I1/spi_rst_data[ |              |      |      |            |             |
+|        11]_AND_25_o |         Local|      |    2 |  0.000     |  0.585      |
++---------------------+--------------+------+------+------------+-------------+
+|spi_I1/spi_rst_data[ |              |      |      |            |             |
+|         19]_AND_9_o |         Local|      |    2 |  0.000     |  0.543      |
++---------------------+--------------+------+------+------------+-------------+
+|spi_I1/spi_rst_data[ |              |      |      |            |             |
+|         7]_AND_33_o |         Local|      |    2 |  0.000     |  0.608      |
++---------------------+--------------+------+------+------------+-------------+
+|spi_I1/spi_rst_data[ |              |      |      |            |             |
+|        12]_AND_23_o |         Local|      |    2 |  0.000     |  0.564      |
++---------------------+--------------+------+------+------------+-------------+
+|spi_I1/spi_rst_data[ |              |      |      |            |             |
+|         0]_AND_47_o |         Local|      |    2 |  0.000     |  0.587      |
++---------------------+--------------+------+------+------------+-------------+
+|spi_I1/spi_rst_data[ |              |      |      |            |             |
+|         8]_AND_31_o |         Local|      |    2 |  0.000     |  0.585      |
++---------------------+--------------+------+------+------------+-------------+
+|spi_I1/spi_rst_data[ |              |      |      |            |             |
+|        13]_AND_21_o |         Local|      |    2 |  0.000     |  0.381      |
++---------------------+--------------+------+------+------------+-------------+
+|spi_I1/spi_rst_data[ |              |      |      |            |             |
+|         1]_AND_45_o |         Local|      |    2 |  0.000     |  0.701      |
++---------------------+--------------+------+------+------------+-------------+
+|spi_I1/spi_rst_data[ |              |      |      |            |             |
+|         9]_AND_29_o |         Local|      |    2 |  0.000     |  0.381      |
++---------------------+--------------+------+------+------------+-------------+
+|spi_I1/spi_rst_data[ |              |      |      |            |             |
+|        14]_AND_19_o |         Local|      |    2 |  0.000     |  0.608      |
++---------------------+--------------+------+------+------------+-------------+
+|spi_I1/spi_rst_data[ |              |      |      |            |             |
+|         2]_AND_43_o |         Local|      |    2 |  0.000     |  0.384      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 0 (Setup: 0, Hold: 0, Component Switching Limit: 0)
+
+Number of Timing Constraints that were not applied: 2
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  COMP "sclk" OFFSET = OUT 20 ns AFTER COMP | MAXDELAY    |    10.411ns|     9.589ns|       0|           0
+   "fpgaclock"                              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "fclk" OFFSET = OUT 20 ns AFTER COMP | MAXDELAY    |    10.610ns|     9.390ns|       0|           0
+   "fpgaclock"                              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "sync" OFFSET = OUT 20 ns AFTER COMP | MAXDELAY    |    11.773ns|     8.227ns|       0|           0
+   "fpgaclock"                              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "din" OFFSET = OUT 20 ns AFTER COMP  | MAXDELAY    |    11.786ns|     8.214ns|       0|           0
+  "fpgaclock"                               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_fpgaclock = PERIOD TIMEGRP "fpgaclock" | SETUP       |    15.658ns|     4.342ns|       0|           0
+   20 ns HIGH 50%                           | HOLD        |     0.439ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  COMP "pulsepin1" OFFSET = OUT 20 ns AFTER | N/A         |         N/A|         N/A|     N/A|         N/A
+   COMP "fpgaclock"                         |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "pulsepin2" OFFSET = OUT 20 ns AFTER | N/A         |         N/A|         N/A|     N/A|         N/A
+   COMP "fpgaclock"                         |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 5 secs 
+Total CPU time to PAR completion: 5 secs 
+
+Peak Memory Usage:  322 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 4
+Number of info messages: 0
+
+Writing design to file spi_test.ncd
+
+
+
+PAR done!

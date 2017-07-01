@@ -1,0 +1,41 @@
+
+
+NET "din" IOSTANDARD = LVCMOS33;
+NET "sclk" IOSTANDARD = LVCMOS33;
+NET "sync" IOSTANDARD = LVCMOS33;
+
+
+NET "sync" LOC = M10;
+NET "sclk" LOC = N8;
+NET "din" LOC = T9;
+NET "fclk" LOC = R8;
+NET "rst" LOC = N4;
+NET "fpgaclock" LOC = V10;
+
+
+NET "fclk" IOSTANDARD = LVCMOS33;
+
+
+NET "din" DRIVE = 12;
+NET "fclk" DRIVE = 12;
+NET "sclk" DRIVE = 12;
+NET "sync" DRIVE = 12;
+
+NET "pulsepin2" LOC = N11;
+
+NET "pulsepin2" IOSTANDARD = LVCMOS33;
+NET "pulsepin2" DRIVE = 24;
+
+NET "pulsepin1" LOC = M11;
+
+NET "pulsepin1" IOSTANDARD = LVCMOS33;
+NET "pulsepin1" DRIVE = 24;
+#Created by Constraints Editor (xc6slx16-csg324-2) - 2017/03/17
+NET "fpgaclock" TNM_NET = "fpgaclock";
+TIMESPEC TS_fpgaclock = PERIOD "fpgaclock" 20 ns HIGH 50 %;
+NET "din" OFFSET = OUT 20 ns AFTER "fpgaclock";
+NET "fclk" OFFSET = OUT 20 ns AFTER "fpgaclock";
+NET "pulsepin1" OFFSET = OUT 20 ns AFTER "fpgaclock";
+NET "pulsepin2" OFFSET = OUT 20 ns AFTER "fpgaclock";
+NET "sclk" OFFSET = OUT 20 ns AFTER "fpgaclock";
+NET "sync" OFFSET = OUT 20 ns AFTER "fpgaclock";

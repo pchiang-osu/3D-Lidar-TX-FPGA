@@ -1,0 +1,1482 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Reading design: spi_test.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "spi_test.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "spi_test"
+Output Format                      : NGC
+Target Device                      : xc6slx16-2-csg324
+
+---- Source Options
+Top Module Name                    : spi_test
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\shishi\Desktop\SPI\spi\spi.v" into library work
+Parsing module <spi>.
+Analyzing Verilog file "C:\Users\shishi\Desktop\SPI\spi\clockpll.v" into library work
+Parsing module <clockpll>.
+Analyzing Verilog file "C:\Users\shishi\Desktop\SPI\spi\spi_test.v" into library work
+Parsing module <spi_test>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <spi_test>.
+WARNING:HDLCompiler:872 - "C:\Users\shishi\Desktop\SPI\spi\spi_test.v" Line 17: Using initial value of inidata_1 since it is never assigned
+WARNING:HDLCompiler:872 - "C:\Users\shishi\Desktop\SPI\spi\spi_test.v" Line 19: Using initial value of inidata_2 since it is never assigned
+WARNING:HDLCompiler:872 - "C:\Users\shishi\Desktop\SPI\spi\spi_test.v" Line 21: Using initial value of inidata_3 since it is never assigned
+WARNING:HDLCompiler:872 - "C:\Users\shishi\Desktop\SPI\spi\spi_test.v" Line 23: Using initial value of inidata_4 since it is never assigned
+WARNING:HDLCompiler:872 - "C:\Users\shishi\Desktop\SPI\spi\spi_test.v" Line 25: Using initial value of data_1 since it is never assigned
+WARNING:HDLCompiler:872 - "C:\Users\shishi\Desktop\SPI\spi\spi_test.v" Line 27: Using initial value of data_2 since it is never assigned
+WARNING:HDLCompiler:872 - "C:\Users\shishi\Desktop\SPI\spi\spi_test.v" Line 29: Using initial value of data_3 since it is never assigned
+WARNING:HDLCompiler:872 - "C:\Users\shishi\Desktop\SPI\spi\spi_test.v" Line 31: Using initial value of data_4 since it is never assigned
+WARNING:HDLCompiler:872 - "C:\Users\shishi\Desktop\SPI\spi\spi_test.v" Line 60: Using initial value of step since it is never assigned
+
+Elaborating module <clockpll>.
+
+Elaborating module <spi>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <spi_test>.
+    Related source file is "C:\Users\shishi\Desktop\SPI\spi\spi_test.v".
+    Found 1-bit register for signal <pulsepin1>.
+    Found 16-bit register for signal <counter>.
+    Found 8-bit register for signal <hori_counter>.
+    Found 12-bit register for signal <verti_counter>.
+    Found 4-bit register for signal <serial_counter>.
+    Found 24-bit register for signal <pin1_A_xplus>.
+    Found 24-bit register for signal <pin2_B_xminu>.
+    Found 24-bit register for signal <pin3_C_yminu>.
+    Found 24-bit register for signal <pin4_D_yplus>.
+    Found 24-bit register for signal <input_buffer>.
+    Found 1-bit register for signal <sclk>.
+    Found 1-bit register for signal <din>.
+    Found 1-bit register for signal <sync>.
+    Found 1-bit register for signal <init>.
+    Found 1-bit register for signal <loop>.
+    Found 1-bit register for signal <flag>.
+    Found 1-bit register for signal <fclk>.
+    Found 24-bit subtractor for signal <pin2_B_xminu[23]_GND_1_o_sub_70_OUT> created at line 218.
+    Found 24-bit subtractor for signal <pin1_A_xplus[23]_GND_1_o_sub_72_OUT> created at line 226.
+    Found 24-bit subtractor for signal <pin4_D_yplus[23]_GND_1_o_sub_80_OUT> created at line 240.
+    Found 16-bit adder for signal <counter[15]_GND_1_o_add_27_OUT> created at line 160.
+    Found 4-bit adder for signal <serial_counter[3]_GND_1_o_add_62_OUT> created at line 204.
+    Found 12-bit adder for signal <verti_counter[11]_GND_1_o_add_64_OUT> created at line 207.
+    Found 24-bit adder for signal <pin1_A_xplus[23]_GND_1_o_add_68_OUT> created at line 217.
+    Found 24-bit adder for signal <pin2_B_xminu[23]_GND_1_o_add_72_OUT> created at line 227.
+    Found 8-bit adder for signal <hori_counter[7]_GND_1_o_add_73_OUT> created at line 229.
+    Found 24-bit adder for signal <pin3_C_yminu[23]_GND_1_o_add_78_OUT> created at line 239.
+    Summary:
+	inferred   8 Adder/Subtractor(s).
+	inferred 168 D-type flip-flop(s).
+	inferred  17 Multiplexer(s).
+Unit <spi_test> synthesized.
+
+Synthesizing Unit <clockpll>.
+    Related source file is "C:\Users\shishi\Desktop\SPI\spi\clockpll.v".
+    Found 16-bit register for signal <count2>.
+    Found 16-bit register for signal <count>.
+    Found 1-bit register for signal <clk>.
+    Found 1-bit register for signal <clk2>.
+    Found 16-bit adder for signal <count[15]_GND_2_o_add_1_OUT> created at line 26.
+    Found 16-bit adder for signal <count2[15]_GND_2_o_add_5_OUT> created at line 43.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  34 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <clockpll> synthesized.
+
+Synthesizing Unit <spi>.
+    Related source file is "C:\Users\shishi\Desktop\SPI\spi\spi.v".
+    Found 1-bit register for signal <sync>.
+    Found 5-bit register for signal <spi_counter>.
+    Found 1-bit register for signal <din_sclk_DFF_24_q>.
+    Found 1-bit register for signal <PWR_4_o_sclk_DFF_50>.
+    Found 1-bit register for signal <data_buffer<23>>.
+    Found 1-bit register for signal <data_buffer<22>>.
+    Found 1-bit register for signal <data_buffer<21>>.
+    Found 1-bit register for signal <data_buffer<20>>.
+    Found 1-bit register for signal <data_buffer<19>>.
+    Found 1-bit register for signal <data_buffer<18>>.
+    Found 1-bit register for signal <data_buffer<17>>.
+    Found 1-bit register for signal <data_buffer<16>>.
+    Found 1-bit register for signal <data_buffer<15>>.
+    Found 1-bit register for signal <data_buffer<14>>.
+    Found 1-bit register for signal <data_buffer<13>>.
+    Found 1-bit register for signal <data_buffer<12>>.
+    Found 1-bit register for signal <data_buffer<11>>.
+    Found 1-bit register for signal <data_buffer<10>>.
+    Found 1-bit register for signal <data_buffer<9>>.
+    Found 1-bit register for signal <data_buffer<8>>.
+    Found 1-bit register for signal <data_buffer<7>>.
+    Found 1-bit register for signal <data_buffer<6>>.
+    Found 1-bit register for signal <data_buffer<5>>.
+    Found 1-bit register for signal <data_buffer<4>>.
+    Found 1-bit register for signal <data_buffer<3>>.
+    Found 1-bit register for signal <data_buffer<2>>.
+    Found 1-bit register for signal <data_buffer<1>>.
+    Found 1-bit register for signal <data_buffer<0>>.
+    Found 5-bit adder for signal <spi_counter[4]_GND_3_o_add_1_OUT> created at line 28.
+    Found 1-bit tristate buffer for signal <din> created at line 13
+    Found 5-bit comparator greater for signal <spi_counter[4]_PWR_3_o_LessThan_1_o> created at line 23
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   3 Multiplexer(s).
+	inferred   1 Tristate(s).
+Unit <spi> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 11
+ 12-bit adder                                          : 1
+ 16-bit adder                                          : 3
+ 24-bit adder                                          : 1
+ 24-bit addsub                                         : 2
+ 24-bit subtractor                                     : 1
+ 4-bit adder                                           : 1
+ 5-bit adder                                           : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 49
+ 1-bit register                                        : 37
+ 12-bit register                                       : 1
+ 16-bit register                                       : 3
+ 24-bit register                                       : 5
+ 4-bit register                                        : 1
+ 5-bit register                                        : 1
+ 8-bit register                                        : 1
+# Comparators                                          : 1
+ 5-bit comparator greater                              : 1
+# Multiplexers                                         : 22
+ 1-bit 2-to-1 multiplexer                              : 1
+ 12-bit 2-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 4
+ 24-bit 2-to-1 multiplexer                             : 13
+ 4-bit 2-to-1 multiplexer                              : 1
+ 5-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+# Tristates                                            : 1
+ 1-bit tristate buffer                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1426 - The value init of the FF/Latch init hinder the constant cleaning in the block spi_test.
+   You should achieve better results by setting this init to 0.
+
+Synthesizing (advanced) Unit <clockpll>.
+The following registers are absorbed into counter <count2>: 1 register on signal <count2>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <clockpll> synthesized (advanced).
+
+Synthesizing (advanced) Unit <spi>.
+The following registers are absorbed into counter <spi_counter>: 1 register on signal <spi_counter>.
+Unit <spi> synthesized (advanced).
+
+Synthesizing (advanced) Unit <spi_test>.
+The following registers are absorbed into counter <hori_counter>: 1 register on signal <hori_counter>.
+The following registers are absorbed into counter <verti_counter>: 1 register on signal <verti_counter>.
+The following registers are absorbed into counter <serial_counter>: 1 register on signal <serial_counter>.
+Unit <spi_test> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 16-bit adder                                          : 1
+ 24-bit adder                                          : 1
+ 24-bit addsub                                         : 2
+ 24-bit subtractor                                     : 1
+# Counters                                             : 6
+ 12-bit up counter                                     : 1
+ 16-bit up counter                                     : 2
+ 4-bit up counter                                      : 1
+ 5-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 173
+ Flip-Flops                                            : 173
+# Comparators                                          : 1
+ 5-bit comparator greater                              : 1
+# Multiplexers                                         : 62
+ 1-bit 2-to-1 multiplexer                              : 49
+ 16-bit 2-to-1 multiplexer                             : 2
+ 24-bit 2-to-1 multiplexer                             : 11
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch init hinder the constant cleaning in the block spi_test.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1293 - FF/Latch <pin3_C_yminu_0> has a constant value of 1 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <pin3_C_yminu_1> has a constant value of 0 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <pin3_C_yminu_2> has a constant value of 0 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <pin3_C_yminu_3> has a constant value of 1 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <pin4_D_yplus_0> has a constant value of 0 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <pin4_D_yplus_1> has a constant value of 0 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <pin4_D_yplus_2> has a constant value of 1 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <pin4_D_yplus_3> has a constant value of 1 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    data_buffer_23 in unit <spi>
+    data_buffer_0 in unit <spi>
+    data_buffer_1 in unit <spi>
+    data_buffer_2 in unit <spi>
+    data_buffer_3 in unit <spi>
+    data_buffer_4 in unit <spi>
+    data_buffer_5 in unit <spi>
+    data_buffer_6 in unit <spi>
+    data_buffer_7 in unit <spi>
+    data_buffer_8 in unit <spi>
+    data_buffer_9 in unit <spi>
+    data_buffer_10 in unit <spi>
+    data_buffer_11 in unit <spi>
+    data_buffer_12 in unit <spi>
+    data_buffer_13 in unit <spi>
+    data_buffer_14 in unit <spi>
+    data_buffer_15 in unit <spi>
+    data_buffer_16 in unit <spi>
+    data_buffer_17 in unit <spi>
+    data_buffer_18 in unit <spi>
+    data_buffer_19 in unit <spi>
+    data_buffer_20 in unit <spi>
+    data_buffer_21 in unit <spi>
+    data_buffer_22 in unit <spi>
+
+WARNING:Xst:2041 - Unit spi: 1 internal tristate is replaced by logic (pull-up yes): din.
+
+Optimizing unit <spi_test> ...
+
+Optimizing unit <clockpll> ...
+
+Optimizing unit <spi> ...
+WARNING:Xst:1293 - FF/Latch <pin1_A_xplus_0> has a constant value of 1 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <pin1_A_xplus_1> has a constant value of 0 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <pin1_A_xplus_2> has a constant value of 0 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <pin1_A_xplus_3> has a constant value of 1 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <pin2_B_xminu_0> has a constant value of 0 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <pin2_B_xminu_1> has a constant value of 0 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <pin2_B_xminu_2> has a constant value of 1 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <pin2_B_xminu_3> has a constant value of 1 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <hori_counter_6> (without init value) has a constant value of 0 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <hori_counter_7> (without init value) has a constant value of 0 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <serial_counter_3> (without init value) has a constant value of 0 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pll/count2_8> (without init value) has a constant value of 0 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pll/count2_9> (without init value) has a constant value of 0 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pll/count2_10> (without init value) has a constant value of 0 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pll/count2_11> (without init value) has a constant value of 0 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pll/count2_12> (without init value) has a constant value of 0 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pll/count2_13> (without init value) has a constant value of 0 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pll/count2_14> (without init value) has a constant value of 0 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pll/count2_15> (without init value) has a constant value of 0 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pll/count_13> (without init value) has a constant value of 0 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pll/count_14> (without init value) has a constant value of 0 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pll/count_15> (without init value) has a constant value of 0 in block <spi_test>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <pin3_C_yminu_4> in Unit <spi_test> is equivalent to the following FF/Latch, which will be removed : <pin4_D_yplus_4> 
+INFO:Xst:2261 - The FF/Latch <pin1_A_xplus_4> in Unit <spi_test> is equivalent to the following FF/Latch, which will be removed : <pin2_B_xminu_4> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block spi_test, actual ratio is 6.
+FlipFlop counter_4 has been replicated 2 time(s)
+FlipFlop counter_5 has been replicated 4 time(s)
+FlipFlop counter_6 has been replicated 2 time(s)
+FlipFlop counter_7 has been replicated 3 time(s)
+FlipFlop counter_8 has been replicated 3 time(s)
+FlipFlop flag has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 241
+ Flip-Flops                                            : 241
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : spi_test.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 765
+#      GND                         : 1
+#      INV                         : 33
+#      LUT1                        : 62
+#      LUT2                        : 200
+#      LUT3                        : 40
+#      LUT4                        : 23
+#      LUT5                        : 22
+#      LUT6                        : 114
+#      MUXCY                       : 134
+#      MUXF7                       : 2
+#      VCC                         : 1
+#      XORCY                       : 133
+# FlipFlops/Latches                : 265
+#      FD                          : 6
+#      FDC                         : 94
+#      FDCE                        : 30
+#      FDCE_1                      : 49
+#      FDE_1                       : 2
+#      FDP                         : 27
+#      FDPE                        : 4
+#      FDPE_1                      : 29
+#      LDC                         : 24
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 7
+#      IBUF                        : 1
+#      OBUF                        : 6
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             263  out of  18224     1%  
+ Number of Slice LUTs:                  494  out of   9112     5%  
+    Number used as Logic:               494  out of   9112     5%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    546
+   Number with an unused Flip Flop:     283  out of    546    51%  
+   Number with an unused LUT:            52  out of    546     9%  
+   Number of fully used LUT-FF pairs:   211  out of    546    38%  
+   Number of unique control sets:        87
+
+IO Utilization: 
+ Number of IOs:                           8
+ Number of bonded IOBs:                   8  out of    232     3%  
+    IOB Flip Flops/Latches:               2
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------------------+-----------------------------------+-------+
+Clock Signal                                                         | Clock buffer(FF name)             | Load  |
+---------------------------------------------------------------------+-----------------------------------+-------+
+fpgaclock                                                            | BUFGP                             | 27    |
+pll/clk2                                                             | BUFG                              | 113   |
+spi_I1/sync                                                          | BUFG                              | 101   |
+spi_I1/spi_rst_data[23]_AND_1_o(spi_I1/spi_rst_data[23]_AND_1_o1:O)  | NONE(*)(spi_I1/data_buffer_23_LDC)| 1     |
+spi_I1/spi_rst_data[0]_AND_47_o(spi_I1/spi_rst_data[0]_AND_47_o1:O)  | NONE(*)(spi_I1/data_buffer_0_LDC) | 1     |
+spi_I1/spi_rst_data[1]_AND_45_o(spi_I1/spi_rst_data[1]_AND_45_o1:O)  | NONE(*)(spi_I1/data_buffer_1_LDC) | 1     |
+spi_I1/spi_rst_data[2]_AND_43_o(spi_I1/spi_rst_data[2]_AND_43_o1:O)  | NONE(*)(spi_I1/data_buffer_2_LDC) | 1     |
+spi_I1/spi_rst_data[3]_AND_41_o(spi_I1/spi_rst_data[3]_AND_41_o1:O)  | NONE(*)(spi_I1/data_buffer_3_LDC) | 1     |
+spi_I1/spi_rst_data[4]_AND_39_o(spi_I1/spi_rst_data[4]_AND_39_o1:O)  | NONE(*)(spi_I1/data_buffer_4_LDC) | 1     |
+spi_I1/spi_rst_data[5]_AND_37_o(spi_I1/spi_rst_data[5]_AND_37_o1:O)  | NONE(*)(spi_I1/data_buffer_5_LDC) | 1     |
+spi_I1/spi_rst_data[6]_AND_35_o(spi_I1/spi_rst_data[6]_AND_35_o1:O)  | NONE(*)(spi_I1/data_buffer_6_LDC) | 1     |
+spi_I1/spi_rst_data[7]_AND_33_o(spi_I1/spi_rst_data[7]_AND_33_o1:O)  | NONE(*)(spi_I1/data_buffer_7_LDC) | 1     |
+spi_I1/spi_rst_data[8]_AND_31_o(spi_I1/spi_rst_data[8]_AND_31_o1:O)  | NONE(*)(spi_I1/data_buffer_8_LDC) | 1     |
+spi_I1/spi_rst_data[9]_AND_29_o(spi_I1/spi_rst_data[9]_AND_29_o1:O)  | NONE(*)(spi_I1/data_buffer_9_LDC) | 1     |
+spi_I1/spi_rst_data[10]_AND_27_o(spi_I1/spi_rst_data[10]_AND_27_o1:O)| NONE(*)(spi_I1/data_buffer_10_LDC)| 1     |
+spi_I1/spi_rst_data[11]_AND_25_o(spi_I1/spi_rst_data[11]_AND_25_o1:O)| NONE(*)(spi_I1/data_buffer_11_LDC)| 1     |
+spi_I1/spi_rst_data[12]_AND_23_o(spi_I1/spi_rst_data[12]_AND_23_o1:O)| NONE(*)(spi_I1/data_buffer_12_LDC)| 1     |
+spi_I1/spi_rst_data[13]_AND_21_o(spi_I1/spi_rst_data[13]_AND_21_o1:O)| NONE(*)(spi_I1/data_buffer_13_LDC)| 1     |
+spi_I1/spi_rst_data[14]_AND_19_o(spi_I1/spi_rst_data[14]_AND_19_o1:O)| NONE(*)(spi_I1/data_buffer_14_LDC)| 1     |
+spi_I1/spi_rst_data[15]_AND_17_o(spi_I1/spi_rst_data[15]_AND_17_o1:O)| NONE(*)(spi_I1/data_buffer_15_LDC)| 1     |
+spi_I1/spi_rst_data[16]_AND_15_o(spi_I1/spi_rst_data[16]_AND_15_o1:O)| NONE(*)(spi_I1/data_buffer_16_LDC)| 1     |
+spi_I1/spi_rst_data[17]_AND_13_o(spi_I1/spi_rst_data[17]_AND_13_o1:O)| NONE(*)(spi_I1/data_buffer_17_LDC)| 1     |
+spi_I1/spi_rst_data[18]_AND_11_o(spi_I1/spi_rst_data[18]_AND_11_o1:O)| NONE(*)(spi_I1/data_buffer_18_LDC)| 1     |
+spi_I1/spi_rst_data[19]_AND_9_o(spi_I1/spi_rst_data[19]_AND_9_o1:O)  | NONE(*)(spi_I1/data_buffer_19_LDC)| 1     |
+spi_I1/spi_rst_data[20]_AND_7_o(spi_I1/spi_rst_data[20]_AND_7_o1:O)  | NONE(*)(spi_I1/data_buffer_20_LDC)| 1     |
+spi_I1/spi_rst_data[21]_AND_5_o(spi_I1/spi_rst_data[21]_AND_5_o1:O)  | NONE(*)(spi_I1/data_buffer_21_LDC)| 1     |
+spi_I1/spi_rst_data[22]_AND_3_o(spi_I1/spi_rst_data[22]_AND_3_o1:O)  | NONE(*)(spi_I1/data_buffer_22_LDC)| 1     |
+---------------------------------------------------------------------+-----------------------------------+-------+
+(*) These 24 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 4.950ns (Maximum Frequency: 202.020MHz)
+   Minimum input arrival time before clock: 6.284ns
+   Maximum output required time after clock: 4.202ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'fpgaclock'
+  Clock period: 4.428ns (frequency: 225.836MHz)
+  Total number of paths / destination ports: 386 / 26
+-------------------------------------------------------------------------
+Delay:               4.428ns (Levels of Logic = 2)
+  Source:            pll/count_5 (FF)
+  Destination:       pll/clk (FF)
+  Source Clock:      fpgaclock rising
+  Destination Clock: fpgaclock rising
+
+  Data Path: pll/count_5 to pll/clk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.525   1.181  pll/count_5 (pll/count_5)
+     LUT6:I0->O           14   0.254   1.235  pll/count[15]_GND_2_o_equal_1_o<15>2 (pll/count[15]_GND_2_o_equal_1_o<15>1)
+     LUT3:I1->O            1   0.250   0.681  pll/count[15]_GND_2_o_equal_1_o<15>3 (pll/count[15]_GND_2_o_equal_1_o)
+     FDCE:CE                   0.302          pll/clk
+    ----------------------------------------
+    Total                      4.428ns (1.331ns logic, 3.097ns route)
+                                       (30.1% logic, 69.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'pll/clk2'
+  Clock period: 4.950ns (frequency: 202.020MHz)
+  Total number of paths / destination ports: 2313 / 185
+-------------------------------------------------------------------------
+Delay:               4.950ns (Levels of Logic = 4)
+  Source:            counter_7_2 (FF)
+  Destination:       input_buffer_4 (FF)
+  Source Clock:      pll/clk2 rising
+  Destination Clock: pll/clk2 rising
+
+  Data Path: counter_7_2 to input_buffer_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.525   0.910  counter_7_2 (counter_7_2)
+     LUT3:I0->O            9   0.235   0.976  Mmux__n02771831 (Mmux__n0277183)
+     LUT5:I4->O            1   0.254   0.790  Mmux__n027712_SW0 (N13)
+     LUT6:I4->O            1   0.250   0.682  Mmux__n027712 (_n0277<15>)
+     LUT6:I5->O            1   0.254   0.000  input_buffer_15_dpot (input_buffer_15_dpot)
+     FDCE:D                    0.074          input_buffer_15
+    ----------------------------------------
+    Total                      4.950ns (1.592ns logic, 3.358ns route)
+                                       (32.2% logic, 67.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'spi_I1/sync'
+  Clock period: 4.732ns (frequency: 211.327MHz)
+  Total number of paths / destination ports: 2925 / 187
+-------------------------------------------------------------------------
+Delay:               4.732ns (Levels of Logic = 2)
+  Source:            hori_counter_4 (FF)
+  Destination:       pin1_A_xplus_4 (FF)
+  Source Clock:      spi_I1/sync falling
+  Destination Clock: spi_I1/sync falling
+
+  Data Path: hori_counter_4 to pin1_A_xplus_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             5   0.525   1.271  hori_counter_4 (hori_counter_4)
+     LUT6:I1->O            5   0.254   0.841  hori_counter[7]_GND_1_o_equal_78_o<7>1 (hori_counter[7]_GND_1_o_equal_78_o)
+     LUT6:I5->O           20   0.254   1.285  _n0409_inv1 (_n0409_inv)
+     FDPE_1:CE                 0.302          pin1_A_xplus_4
+    ----------------------------------------
+    Total                      4.732ns (1.335ns logic, 3.397ns route)
+                                       (28.2% logic, 71.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'pll/clk2'
+  Total number of paths / destination ports: 115 / 113
+-------------------------------------------------------------------------
+Offset:              6.284ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       counter_0 (FF)
+  Destination Clock: pll/clk2 rising
+
+  Data Path: rst to counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.843  rst_IBUF (rst_IBUF)
+     INV:I->O            185   0.255   2.399  rst_inv1_INV_0 (pll/ncr_inv)
+     FDPE:PRE                  0.459          input_buffer_0
+    ----------------------------------------
+    Total                      6.284ns (2.042ns logic, 4.242ns route)
+                                       (32.5% logic, 67.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'spi_I1/sync'
+  Total number of paths / destination ports: 101 / 101
+-------------------------------------------------------------------------
+Offset:              6.284ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       pin1_A_xplus_4 (FF)
+  Destination Clock: spi_I1/sync falling
+
+  Data Path: rst to pin1_A_xplus_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.843  rst_IBUF (rst_IBUF)
+     INV:I->O            185   0.255   2.399  rst_inv1_INV_0 (pll/ncr_inv)
+     FDPE_1:PRE                0.459          pin4_D_yplus_5
+    ----------------------------------------
+    Total                      6.284ns (2.042ns logic, 4.242ns route)
+                                       (32.5% logic, 67.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'fpgaclock'
+  Total number of paths / destination ports: 23 / 23
+-------------------------------------------------------------------------
+Offset:              6.284ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       pll/count_12 (FF)
+  Destination Clock: fpgaclock rising
+
+  Data Path: rst to pll/count_12
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.843  rst_IBUF (rst_IBUF)
+     INV:I->O            185   0.255   2.399  rst_inv1_INV_0 (pll/ncr_inv)
+     FDCE:CLR                  0.459          pll/clk
+    ----------------------------------------
+    Total                      6.284ns (2.042ns logic, 4.242ns route)
+                                       (32.5% logic, 67.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'spi_I1/spi_rst_data[23]_AND_1_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.714ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       spi_I1/data_buffer_23_LDC (LATCH)
+  Destination Clock: spi_I1/spi_rst_data[23]_AND_1_o falling
+
+  Data Path: rst to spi_I1/data_buffer_23_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.952  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.250   0.725  spi_I1/spi_rst_data[23]_AND_2_o1 (spi_I1/spi_rst_data[23]_AND_2_o)
+     LDC:CLR                   0.459          spi_I1/data_buffer_23_LDC
+    ----------------------------------------
+    Total                      4.714ns (2.037ns logic, 2.677ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'spi_I1/spi_rst_data[0]_AND_47_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.714ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       spi_I1/data_buffer_0_LDC (LATCH)
+  Destination Clock: spi_I1/spi_rst_data[0]_AND_47_o falling
+
+  Data Path: rst to spi_I1/data_buffer_0_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.952  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.250   0.725  spi_I1/spi_rst_data[0]_AND_48_o1 (spi_I1/spi_rst_data[0]_AND_48_o)
+     LDC:CLR                   0.459          spi_I1/data_buffer_0_LDC
+    ----------------------------------------
+    Total                      4.714ns (2.037ns logic, 2.677ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'spi_I1/spi_rst_data[1]_AND_45_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.714ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       spi_I1/data_buffer_1_LDC (LATCH)
+  Destination Clock: spi_I1/spi_rst_data[1]_AND_45_o falling
+
+  Data Path: rst to spi_I1/data_buffer_1_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.952  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.250   0.725  spi_I1/spi_rst_data[1]_AND_46_o1 (spi_I1/spi_rst_data[1]_AND_46_o)
+     LDC:CLR                   0.459          spi_I1/data_buffer_1_LDC
+    ----------------------------------------
+    Total                      4.714ns (2.037ns logic, 2.677ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'spi_I1/spi_rst_data[2]_AND_43_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.714ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       spi_I1/data_buffer_2_LDC (LATCH)
+  Destination Clock: spi_I1/spi_rst_data[2]_AND_43_o falling
+
+  Data Path: rst to spi_I1/data_buffer_2_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.952  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.250   0.725  spi_I1/spi_rst_data[2]_AND_44_o1 (spi_I1/spi_rst_data[2]_AND_44_o)
+     LDC:CLR                   0.459          spi_I1/data_buffer_2_LDC
+    ----------------------------------------
+    Total                      4.714ns (2.037ns logic, 2.677ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'spi_I1/spi_rst_data[3]_AND_41_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.714ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       spi_I1/data_buffer_3_LDC (LATCH)
+  Destination Clock: spi_I1/spi_rst_data[3]_AND_41_o falling
+
+  Data Path: rst to spi_I1/data_buffer_3_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.952  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.250   0.725  spi_I1/spi_rst_data[3]_AND_42_o1 (spi_I1/spi_rst_data[3]_AND_42_o)
+     LDC:CLR                   0.459          spi_I1/data_buffer_3_LDC
+    ----------------------------------------
+    Total                      4.714ns (2.037ns logic, 2.677ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'spi_I1/spi_rst_data[4]_AND_39_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.714ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       spi_I1/data_buffer_4_LDC (LATCH)
+  Destination Clock: spi_I1/spi_rst_data[4]_AND_39_o falling
+
+  Data Path: rst to spi_I1/data_buffer_4_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.952  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.250   0.725  spi_I1/spi_rst_data[4]_AND_40_o1 (spi_I1/spi_rst_data[4]_AND_40_o)
+     LDC:CLR                   0.459          spi_I1/data_buffer_4_LDC
+    ----------------------------------------
+    Total                      4.714ns (2.037ns logic, 2.677ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'spi_I1/spi_rst_data[5]_AND_37_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.714ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       spi_I1/data_buffer_5_LDC (LATCH)
+  Destination Clock: spi_I1/spi_rst_data[5]_AND_37_o falling
+
+  Data Path: rst to spi_I1/data_buffer_5_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.952  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.250   0.725  spi_I1/spi_rst_data[5]_AND_38_o1 (spi_I1/spi_rst_data[5]_AND_38_o)
+     LDC:CLR                   0.459          spi_I1/data_buffer_5_LDC
+    ----------------------------------------
+    Total                      4.714ns (2.037ns logic, 2.677ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'spi_I1/spi_rst_data[6]_AND_35_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.714ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       spi_I1/data_buffer_6_LDC (LATCH)
+  Destination Clock: spi_I1/spi_rst_data[6]_AND_35_o falling
+
+  Data Path: rst to spi_I1/data_buffer_6_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.952  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.250   0.725  spi_I1/spi_rst_data[6]_AND_36_o1 (spi_I1/spi_rst_data[6]_AND_36_o)
+     LDC:CLR                   0.459          spi_I1/data_buffer_6_LDC
+    ----------------------------------------
+    Total                      4.714ns (2.037ns logic, 2.677ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'spi_I1/spi_rst_data[7]_AND_33_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.714ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       spi_I1/data_buffer_7_LDC (LATCH)
+  Destination Clock: spi_I1/spi_rst_data[7]_AND_33_o falling
+
+  Data Path: rst to spi_I1/data_buffer_7_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.952  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.250   0.725  spi_I1/spi_rst_data[7]_AND_34_o1 (spi_I1/spi_rst_data[7]_AND_34_o)
+     LDC:CLR                   0.459          spi_I1/data_buffer_7_LDC
+    ----------------------------------------
+    Total                      4.714ns (2.037ns logic, 2.677ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'spi_I1/spi_rst_data[8]_AND_31_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.714ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       spi_I1/data_buffer_8_LDC (LATCH)
+  Destination Clock: spi_I1/spi_rst_data[8]_AND_31_o falling
+
+  Data Path: rst to spi_I1/data_buffer_8_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.952  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.250   0.725  spi_I1/spi_rst_data[8]_AND_32_o1 (spi_I1/spi_rst_data[8]_AND_32_o)
+     LDC:CLR                   0.459          spi_I1/data_buffer_8_LDC
+    ----------------------------------------
+    Total                      4.714ns (2.037ns logic, 2.677ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'spi_I1/spi_rst_data[9]_AND_29_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.714ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       spi_I1/data_buffer_9_LDC (LATCH)
+  Destination Clock: spi_I1/spi_rst_data[9]_AND_29_o falling
+
+  Data Path: rst to spi_I1/data_buffer_9_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.952  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.250   0.725  spi_I1/spi_rst_data[9]_AND_30_o1 (spi_I1/spi_rst_data[9]_AND_30_o)
+     LDC:CLR                   0.459          spi_I1/data_buffer_9_LDC
+    ----------------------------------------
+    Total                      4.714ns (2.037ns logic, 2.677ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'spi_I1/spi_rst_data[10]_AND_27_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.714ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       spi_I1/data_buffer_10_LDC (LATCH)
+  Destination Clock: spi_I1/spi_rst_data[10]_AND_27_o falling
+
+  Data Path: rst to spi_I1/data_buffer_10_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.952  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.250   0.725  spi_I1/spi_rst_data[10]_AND_28_o1 (spi_I1/spi_rst_data[10]_AND_28_o)
+     LDC:CLR                   0.459          spi_I1/data_buffer_10_LDC
+    ----------------------------------------
+    Total                      4.714ns (2.037ns logic, 2.677ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'spi_I1/spi_rst_data[11]_AND_25_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.714ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       spi_I1/data_buffer_11_LDC (LATCH)
+  Destination Clock: spi_I1/spi_rst_data[11]_AND_25_o falling
+
+  Data Path: rst to spi_I1/data_buffer_11_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.952  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.250   0.725  spi_I1/spi_rst_data[11]_AND_26_o1 (spi_I1/spi_rst_data[11]_AND_26_o)
+     LDC:CLR                   0.459          spi_I1/data_buffer_11_LDC
+    ----------------------------------------
+    Total                      4.714ns (2.037ns logic, 2.677ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'spi_I1/spi_rst_data[12]_AND_23_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.714ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       spi_I1/data_buffer_12_LDC (LATCH)
+  Destination Clock: spi_I1/spi_rst_data[12]_AND_23_o falling
+
+  Data Path: rst to spi_I1/data_buffer_12_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.952  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.250   0.725  spi_I1/spi_rst_data[12]_AND_24_o1 (spi_I1/spi_rst_data[12]_AND_24_o)
+     LDC:CLR                   0.459          spi_I1/data_buffer_12_LDC
+    ----------------------------------------
+    Total                      4.714ns (2.037ns logic, 2.677ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'spi_I1/spi_rst_data[13]_AND_21_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.714ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       spi_I1/data_buffer_13_LDC (LATCH)
+  Destination Clock: spi_I1/spi_rst_data[13]_AND_21_o falling
+
+  Data Path: rst to spi_I1/data_buffer_13_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.952  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.250   0.725  spi_I1/spi_rst_data[13]_AND_22_o1 (spi_I1/spi_rst_data[13]_AND_22_o)
+     LDC:CLR                   0.459          spi_I1/data_buffer_13_LDC
+    ----------------------------------------
+    Total                      4.714ns (2.037ns logic, 2.677ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'spi_I1/spi_rst_data[14]_AND_19_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.714ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       spi_I1/data_buffer_14_LDC (LATCH)
+  Destination Clock: spi_I1/spi_rst_data[14]_AND_19_o falling
+
+  Data Path: rst to spi_I1/data_buffer_14_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.952  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.250   0.725  spi_I1/spi_rst_data[14]_AND_20_o1 (spi_I1/spi_rst_data[14]_AND_20_o)
+     LDC:CLR                   0.459          spi_I1/data_buffer_14_LDC
+    ----------------------------------------
+    Total                      4.714ns (2.037ns logic, 2.677ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'spi_I1/spi_rst_data[15]_AND_17_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.714ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       spi_I1/data_buffer_15_LDC (LATCH)
+  Destination Clock: spi_I1/spi_rst_data[15]_AND_17_o falling
+
+  Data Path: rst to spi_I1/data_buffer_15_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.952  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.250   0.725  spi_I1/spi_rst_data[15]_AND_18_o1 (spi_I1/spi_rst_data[15]_AND_18_o)
+     LDC:CLR                   0.459          spi_I1/data_buffer_15_LDC
+    ----------------------------------------
+    Total                      4.714ns (2.037ns logic, 2.677ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'spi_I1/spi_rst_data[16]_AND_15_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.714ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       spi_I1/data_buffer_16_LDC (LATCH)
+  Destination Clock: spi_I1/spi_rst_data[16]_AND_15_o falling
+
+  Data Path: rst to spi_I1/data_buffer_16_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.952  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.250   0.725  spi_I1/spi_rst_data[16]_AND_16_o1 (spi_I1/spi_rst_data[16]_AND_16_o)
+     LDC:CLR                   0.459          spi_I1/data_buffer_16_LDC
+    ----------------------------------------
+    Total                      4.714ns (2.037ns logic, 2.677ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'spi_I1/spi_rst_data[17]_AND_13_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.714ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       spi_I1/data_buffer_17_LDC (LATCH)
+  Destination Clock: spi_I1/spi_rst_data[17]_AND_13_o falling
+
+  Data Path: rst to spi_I1/data_buffer_17_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.952  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.250   0.725  spi_I1/spi_rst_data[17]_AND_14_o1 (spi_I1/spi_rst_data[17]_AND_14_o)
+     LDC:CLR                   0.459          spi_I1/data_buffer_17_LDC
+    ----------------------------------------
+    Total                      4.714ns (2.037ns logic, 2.677ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'spi_I1/spi_rst_data[18]_AND_11_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.714ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       spi_I1/data_buffer_18_LDC (LATCH)
+  Destination Clock: spi_I1/spi_rst_data[18]_AND_11_o falling
+
+  Data Path: rst to spi_I1/data_buffer_18_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.952  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.250   0.725  spi_I1/spi_rst_data[18]_AND_12_o1 (spi_I1/spi_rst_data[18]_AND_12_o)
+     LDC:CLR                   0.459          spi_I1/data_buffer_18_LDC
+    ----------------------------------------
+    Total                      4.714ns (2.037ns logic, 2.677ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'spi_I1/spi_rst_data[19]_AND_9_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.714ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       spi_I1/data_buffer_19_LDC (LATCH)
+  Destination Clock: spi_I1/spi_rst_data[19]_AND_9_o falling
+
+  Data Path: rst to spi_I1/data_buffer_19_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.952  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.250   0.725  spi_I1/spi_rst_data[19]_AND_10_o1 (spi_I1/spi_rst_data[19]_AND_10_o)
+     LDC:CLR                   0.459          spi_I1/data_buffer_19_LDC
+    ----------------------------------------
+    Total                      4.714ns (2.037ns logic, 2.677ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'spi_I1/spi_rst_data[20]_AND_7_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.714ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       spi_I1/data_buffer_20_LDC (LATCH)
+  Destination Clock: spi_I1/spi_rst_data[20]_AND_7_o falling
+
+  Data Path: rst to spi_I1/data_buffer_20_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.952  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.250   0.725  spi_I1/spi_rst_data[20]_AND_8_o1 (spi_I1/spi_rst_data[20]_AND_8_o)
+     LDC:CLR                   0.459          spi_I1/data_buffer_20_LDC
+    ----------------------------------------
+    Total                      4.714ns (2.037ns logic, 2.677ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'spi_I1/spi_rst_data[21]_AND_5_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.714ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       spi_I1/data_buffer_21_LDC (LATCH)
+  Destination Clock: spi_I1/spi_rst_data[21]_AND_5_o falling
+
+  Data Path: rst to spi_I1/data_buffer_21_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.952  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.250   0.725  spi_I1/spi_rst_data[21]_AND_6_o1 (spi_I1/spi_rst_data[21]_AND_6_o)
+     LDC:CLR                   0.459          spi_I1/data_buffer_21_LDC
+    ----------------------------------------
+    Total                      4.714ns (2.037ns logic, 2.677ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'spi_I1/spi_rst_data[22]_AND_3_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.714ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       spi_I1/data_buffer_22_LDC (LATCH)
+  Destination Clock: spi_I1/spi_rst_data[22]_AND_3_o falling
+
+  Data Path: rst to spi_I1/data_buffer_22_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            53   1.328   1.952  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.250   0.725  spi_I1/spi_rst_data[22]_AND_4_o1 (spi_I1/spi_rst_data[22]_AND_4_o)
+     LDC:CLR                   0.459          spi_I1/data_buffer_22_LDC
+    ----------------------------------------
+    Total                      4.714ns (2.037ns logic, 2.677ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'fpgaclock'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              4.118ns (Levels of Logic = 1)
+  Source:            sclk (FF)
+  Destination:       sclk (PAD)
+  Source Clock:      fpgaclock rising
+
+  Data Path: sclk to sclk
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.525   0.681  sclk (sclk_OBUF)
+     OBUF:I->O                 2.912          sclk_OBUF (sclk)
+    ----------------------------------------
+    Total                      4.118ns (3.437ns logic, 0.681ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'pll/clk2'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.202ns (Levels of Logic = 1)
+  Source:            pulsepin1 (FF)
+  Destination:       pulsepin1 (PAD)
+  Source Clock:      pll/clk2 rising
+
+  Data Path: pulsepin1 to pulsepin1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              3   0.525   0.765  pulsepin1 (pulsepin1_OBUF)
+     OBUF:I->O                 2.912          pulsepin1_OBUF (pulsepin1)
+    ----------------------------------------
+    Total                      4.202ns (3.437ns logic, 0.765ns route)
+                                       (81.8% logic, 18.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock fpgaclock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+fpgaclock      |    4.428|         |         |         |
+pll/clk2       |    1.683|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock pll/clk2
+--------------------------------+---------+---------+---------+---------+
+                                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------+---------+---------+---------+---------+
+pll/clk2                        |    4.950|         |         |         |
+spi_I1/spi_rst_data[0]_AND_47_o |         |    2.046|         |         |
+spi_I1/spi_rst_data[10]_AND_27_o|         |    2.046|         |         |
+spi_I1/spi_rst_data[11]_AND_25_o|         |    2.046|         |         |
+spi_I1/spi_rst_data[12]_AND_23_o|         |    2.046|         |         |
+spi_I1/spi_rst_data[13]_AND_21_o|         |    2.046|         |         |
+spi_I1/spi_rst_data[14]_AND_19_o|         |    2.046|         |         |
+spi_I1/spi_rst_data[15]_AND_17_o|         |    2.046|         |         |
+spi_I1/spi_rst_data[16]_AND_15_o|         |    2.046|         |         |
+spi_I1/spi_rst_data[17]_AND_13_o|         |    2.046|         |         |
+spi_I1/spi_rst_data[18]_AND_11_o|         |    2.046|         |         |
+spi_I1/spi_rst_data[19]_AND_9_o |         |    2.046|         |         |
+spi_I1/spi_rst_data[1]_AND_45_o |         |    2.046|         |         |
+spi_I1/spi_rst_data[20]_AND_7_o |         |    2.046|         |         |
+spi_I1/spi_rst_data[21]_AND_5_o |         |    2.046|         |         |
+spi_I1/spi_rst_data[22]_AND_3_o |         |    2.046|         |         |
+spi_I1/spi_rst_data[23]_AND_1_o |         |    2.046|         |         |
+spi_I1/spi_rst_data[2]_AND_43_o |         |    2.046|         |         |
+spi_I1/spi_rst_data[3]_AND_41_o |         |    2.046|         |         |
+spi_I1/spi_rst_data[4]_AND_39_o |         |    2.046|         |         |
+spi_I1/spi_rst_data[5]_AND_37_o |         |    2.046|         |         |
+spi_I1/spi_rst_data[6]_AND_35_o |         |    2.046|         |         |
+spi_I1/spi_rst_data[7]_AND_33_o |         |    2.046|         |         |
+spi_I1/spi_rst_data[8]_AND_31_o |         |    2.046|         |         |
+spi_I1/spi_rst_data[9]_AND_29_o |         |    2.046|         |         |
+spi_I1/sync                     |         |    5.979|         |         |
+--------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock spi_I1/spi_rst_data[0]_AND_47_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pll/clk2       |         |         |    2.767|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock spi_I1/spi_rst_data[10]_AND_27_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pll/clk2       |         |         |    2.804|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock spi_I1/spi_rst_data[11]_AND_25_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pll/clk2       |         |         |    2.804|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock spi_I1/spi_rst_data[12]_AND_23_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pll/clk2       |         |         |    2.767|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock spi_I1/spi_rst_data[13]_AND_21_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pll/clk2       |         |         |    2.804|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock spi_I1/spi_rst_data[14]_AND_19_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pll/clk2       |         |         |    2.804|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock spi_I1/spi_rst_data[15]_AND_17_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pll/clk2       |         |         |    2.767|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock spi_I1/spi_rst_data[16]_AND_15_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pll/clk2       |         |         |    2.767|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock spi_I1/spi_rst_data[17]_AND_13_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pll/clk2       |         |         |    2.767|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock spi_I1/spi_rst_data[18]_AND_11_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pll/clk2       |         |         |    2.767|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock spi_I1/spi_rst_data[19]_AND_9_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pll/clk2       |         |         |    2.767|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock spi_I1/spi_rst_data[1]_AND_45_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pll/clk2       |         |         |    2.767|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock spi_I1/spi_rst_data[20]_AND_7_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pll/clk2       |         |         |    2.767|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock spi_I1/spi_rst_data[21]_AND_5_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pll/clk2       |         |         |    2.767|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock spi_I1/spi_rst_data[22]_AND_3_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pll/clk2       |         |         |    2.767|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock spi_I1/spi_rst_data[23]_AND_1_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pll/clk2       |         |         |    2.767|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock spi_I1/spi_rst_data[2]_AND_43_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pll/clk2       |         |         |    2.767|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock spi_I1/spi_rst_data[3]_AND_41_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pll/clk2       |         |         |    2.767|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock spi_I1/spi_rst_data[4]_AND_39_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pll/clk2       |         |         |    2.767|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock spi_I1/spi_rst_data[5]_AND_37_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pll/clk2       |         |         |    2.804|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock spi_I1/spi_rst_data[6]_AND_35_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pll/clk2       |         |         |    2.767|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock spi_I1/spi_rst_data[7]_AND_33_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pll/clk2       |         |         |    2.767|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock spi_I1/spi_rst_data[8]_AND_31_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pll/clk2       |         |         |    2.767|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock spi_I1/spi_rst_data[9]_AND_29_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pll/clk2       |         |         |    2.804|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock spi_I1/sync
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+pll/clk2       |         |         |    5.245|         |
+spi_I1/sync    |         |         |    4.732|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.57 secs
+ 
+--> 
+
+Total memory usage is 253348 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   43 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

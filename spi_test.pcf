@@ -1,0 +1,31 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sat Jul 01 20:27:42 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "rst" LOCATE = SITE "N4" LEVEL 1;
+COMP "din" LOCATE = SITE "T9" LEVEL 1;
+COMP "fpgaclock" LOCATE = SITE "V10" LEVEL 1;
+COMP "fclk" LOCATE = SITE "R8" LEVEL 1;
+COMP "sclk" LOCATE = SITE "N8" LEVEL 1;
+COMP "pulsepin2" LOCATE = SITE "N11" LEVEL 1;
+COMP "sync" LOCATE = SITE "M10" LEVEL 1;
+COMP "pulsepin1" LOCATE = SITE "M11" LEVEL 1;
+TIMEGRP fpgaclock = BEL "sclk" BEL "fclk" BEL "din" BEL "sync" BEL
+        "pll/count_12" BEL "pll/count_11" BEL "pll/count_10" BEL "pll/count_9"
+        BEL "pll/count_8" BEL "pll/count_7" BEL "pll/count_6" BEL
+        "pll/count_5" BEL "pll/count_4" BEL "pll/count_3" BEL "pll/count_2"
+        BEL "pll/count_1" BEL "pll/count_0" BEL "pll/count2_7" BEL
+        "pll/count2_6" BEL "pll/count2_5" BEL "pll/count2_4" BEL
+        "pll/count2_3" BEL "pll/count2_2" BEL "pll/count2_1" BEL
+        "pll/count2_0" BEL "pll/clk" BEL "pll/clk2" BEL
+        "fpgaclock_BUFGP/BUFG";
+TS_fpgaclock = PERIOD TIMEGRP "fpgaclock" 20 ns HIGH 50%;
+COMP "sclk" OFFSET = OUT 20 ns AFTER COMP "fpgaclock";
+COMP "sync" OFFSET = OUT 20 ns AFTER COMP "fpgaclock";
+COMP "din" OFFSET = OUT 20 ns AFTER COMP "fpgaclock";
+COMP "fclk" OFFSET = OUT 20 ns AFTER COMP "fpgaclock";
+COMP "pulsepin1" OFFSET = OUT 20 ns AFTER COMP "fpgaclock";
+COMP "pulsepin2" OFFSET = OUT 20 ns AFTER COMP "fpgaclock";
+SCHEMATIC END;
+

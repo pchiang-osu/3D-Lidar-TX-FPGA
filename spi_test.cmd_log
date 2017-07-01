@@ -1,0 +1,36 @@
+xst -intstyle ise -ifn "D:/SPI/spi/spi_test.xst" -ofn "D:/SPI/spi/spi_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spi_test.ucf -p xc6slx16-csg324-2 spi_test.ngc spi_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o spi_test_map.ncd spi_test.ngd spi_test.pcf 
+par -w -intstyle ise -ol high -mt off spi_test_map.ncd spi_test.ncd spi_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml spi_test.twx spi_test.ncd -o spi_test.twr spi_test.pcf -ucf spi_test.ucf 
+bitgen -intstyle ise -f spi_test.ut spi_test.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spi_test.ucf -p xc6slx16-csg324-2 spi_test.ngc spi_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o spi_test_map.ncd spi_test.ngd spi_test.pcf 
+par -w -intstyle ise -ol high -mt off spi_test_map.ncd spi_test.ncd spi_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml spi_test.twx spi_test.ncd -o spi_test.twr spi_test.pcf -ucf spi_test.ucf 
+bitgen -intstyle ise -f spi_test.ut spi_test.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spi_test.ucf -p xc6slx16-csg324-2 spi_test.ngc spi_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o spi_test_map.ncd spi_test.ngd spi_test.pcf 
+par -w -intstyle ise -ol high -mt off spi_test_map.ncd spi_test.ncd spi_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml spi_test.twx spi_test.ncd -o spi_test.twr spi_test.pcf -ucf spi_test.ucf 
+bitgen -intstyle ise -f spi_test.ut spi_test.ncd 
+xst -intstyle ise -ifn "C:/Users/shishi/Desktop/SPI/spi/spi_test.xst" -ofn "C:/Users/shishi/Desktop/SPI/spi/spi_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spi_test.ucf -p xc6slx16-csg324-2 spi_test.ngc spi_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o spi_test_map.ncd spi_test.ngd spi_test.pcf 
+par -w -intstyle ise -ol high -mt off spi_test_map.ncd spi_test.ncd spi_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml spi_test.twx spi_test.ncd -o spi_test.twr spi_test.pcf -ucf spi_test.ucf 
+bitgen -intstyle ise -f spi_test.ut spi_test.ncd 
+xst -intstyle ise -ifn "C:/Users/shishi/Desktop/SPI/spi/spi_test.xst" -ofn "C:/Users/shishi/Desktop/SPI/spi/spi_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spi_test.ucf -p xc6slx16-csg324-2 spi_test.ngc spi_test.ngd  
+xst -intstyle ise -ifn "C:/Users/shishi/Desktop/SPI/spi/spi_test.xst" -ofn "C:/Users/shishi/Desktop/SPI/spi/spi_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spi_test.ucf -p xc6slx16-csg324-2 spi_test.ngc spi_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o spi_test_map.ncd spi_test.ngd spi_test.pcf 
+par -w -intstyle ise -ol high -mt off spi_test_map.ncd spi_test.ncd spi_test.pcf 
+xst -intstyle ise -ifn "C:/Users/shishi/Desktop/SPI/spi/spi_test.xst" -ofn "C:/Users/shishi/Desktop/SPI/spi/spi_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spi_test.ucf -p xc6slx16-csg324-2 spi_test.ngc spi_test.ngd  
+xst -intstyle ise -ifn "C:/Users/shishi/Desktop/SPI/spi/spi_test.xst" -ofn "C:/Users/shishi/Desktop/SPI/spi/spi_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc spi_test.ucf -p xc6slx16-csg324-2 spi_test.ngc spi_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o spi_test_map.ncd spi_test.ngd spi_test.pcf 
+par -w -intstyle ise -ol high -mt off spi_test_map.ncd spi_test.ncd spi_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml spi_test.twx spi_test.ncd -o spi_test.twr spi_test.pcf -ucf spi_test.ucf 
+bitgen -intstyle ise -f spi_test.ut spi_test.ncd 

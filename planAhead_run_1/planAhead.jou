@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Fri Mar 17 20:37:46 2017
+# Process ID: 9564
+# Log file: D:/SPI/spi/planAhead_run_1/planAhead.log
+# Journal file: D:/SPI/spi/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source D:/SPI/spi/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+set_property drive 6 [get_ports [list pulsepin1]]
+set_property drive 6 [get_ports [list pulsepin2]]
+save_constraints
+set_property drive 24 [get_ports [list pulsepin1]]
+set_property drive 24 [get_ports [list pulsepin2]]
+save_constraints

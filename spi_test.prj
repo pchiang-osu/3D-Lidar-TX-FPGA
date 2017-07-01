@@ -1,0 +1,3 @@
+verilog work "spi.v"
+verilog work "clockpll.v"
+verilog work "spi_test.v"

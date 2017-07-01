@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Fri Mar 17 20:41:00 2017
+# Process ID: 9628
+# Log file: D:/SPI/spi/planAhead_run_2/planAhead.log
+# Journal file: D:/SPI/spi/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from D:/Applications/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [D:/Applications/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [D:/Applications/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source D:/SPI/spi/pa.fromHdl.tcl
+# create_project -name spi -dir "D:/SPI/spi/planAhead_run_2" -part xc6slx16csg324-2
+ERROR: [Common 17-53] User Exception: Project already exists on disk, please use '-force' option to overwrite: 
+     D:/SPI/spi/planAhead_run_2/spi.ppr
+     D:/SPI/spi/planAhead_run_2/spi.data
+
+    while executing
+"create_project -name spi -dir "D:/SPI/spi/planAhead_run_2" -part xc6slx16csg324-2"
+    (file "D:/SPI/spi/pa.fromHdl.tcl" line 4)
+exit
+INFO: [Common 17-206] Exiting PlanAhead at Fri Mar 17 20:42:13 2017...
+INFO: [Common 17-83] Releasing license: PlanAhead
